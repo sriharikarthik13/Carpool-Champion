@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Page</title>
+    <link rel="stylesheet" href="../static/styler.css">
+    <script>
+        function toggleFlip(cardId) {
+            const card = document.getElementById(cardId);
+            card.classList.toggle('flipped');
+        }
+    </script>
+</head>
+<body>
+    <div class="result-container">
+        <div id="card1" class="card" onclick="toggleFlip('card1')">
+            <div class="card-front">
+                <img src="../static/Carpool_Impact.png" alt="Image 1">
+            </div>
+            <div class="card-back">
+                <ul>
+                    <li>The Car Count is decreased by : {{value1}} %</li>
+                    <br>
+                    <li>The Predicted car count at 11:00 AM is : {{value2}}</li>
+                    <br>
+                    <li>The car count if carpooling is adopted ar 11:00AM is : {{value3}}</li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
